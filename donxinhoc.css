@@ -1,0 +1,27 @@
+body {
+  font-size: 16px;
+}
+.header, h1 {
+  text-align: center;
+}
+#decorationline {
+  color: red;
+}
+#formtitle {
+  margin-left: 1em;
+}
+p.infor, p.content {
+  text-indent: 2em;
+}
+b {color: #3731a5;}
+.footer {
+  direction: rtl;
+}
+#formmaker {
+  margin-right: 2.6em;
+}
+#signature {
+  margin-right: 2em;
+  font-weight: bold;
+  color: #3731a5;
+}
