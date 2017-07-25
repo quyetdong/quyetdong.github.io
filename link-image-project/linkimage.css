@@ -5,9 +5,23 @@ body {
 }
 
 .productimage {
-	max-width: 300px;
+	width: 100%;
 }
 
+a {
+	color: blue;
+	text-decoration: none;
+
+}
+a:hover {
+	color: green;
+}
+
+div {
+	border: 1px solid grey;
+	max-width: 300px;
+	margin-top: 20px;
+}
 /*a {
 	float: left;
 }
