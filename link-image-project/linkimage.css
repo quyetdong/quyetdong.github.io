@@ -1,0 +1,14 @@
+/* css file for link-image index*/
+body {
+	max-width: 1000px;
+	margin: auto;
+}
+
+.productimage {
+	max-width: 300px;
+}
+
+/*a {
+	float: left;
+}
+*/
