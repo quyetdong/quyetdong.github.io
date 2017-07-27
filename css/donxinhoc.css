@@ -1,30 +1,36 @@
 * {
 	box-sizing: border-box;
 }
+
 body {
   font-size: 16px;
-  width: 90%;
+  width: 1000px;
   margin: auto;
 }
+
 .header, h1 {
   text-align: center;
 }
+
 #decorationline {
   color: red;
 }
-#formtitle {
-  margin-left: 1em;
-}
+
 p.infor, p.content {
-  text-indent: 2em;
+  text-indent: 1.5em;
 }
+
 b {color: #3731a5;}
+
 .footer {
   direction: rtl;
+  padding-right: 1em;
 }
+
 #formmaker {
   margin-right: 2.6em;
 }
+
 #signature {
   margin-right: 2em;
   font-weight: bold;
