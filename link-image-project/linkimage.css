@@ -1,0 +1,28 @@
+/* css file for link-image index*/
+body {
+	max-width: 1000px;
+	margin: auto;
+}
+
+.productimage {
+	width: 100%;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+
+}
+a:hover {
+	color: red;
+}
+
+div {
+	border: 1px solid grey;
+	max-width: 300px;
+	margin-top: 20px;
+}
+/*a {
+	float: left;
+}
+*/
