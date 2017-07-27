@@ -5,6 +5,18 @@
 }
 
 body {
-	max-width:;
+	max-width:1000px;
 	margin: 0 auto;
+}
+
+div {
+	display: inline-block;
+	max-width: 30%;
+	height: 30em;
+}
+
+img {
+	float: left;
+	height: 50%;
+	max-width: 100%;
 }
