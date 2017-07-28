@@ -2,12 +2,11 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-
 }
 
 body {
 	max-width:1200px;
-	margin: auto;
+	margin: 0 auto;
 }
 
 h1 {
@@ -19,14 +18,12 @@ h1 {
 .container {
 	max-height: 100%;
 	max-width: 100%;
-	margin: auto;
-	margin-bottom: 0.5em;
+	margin: 0 auto;
 }
 
 #banner {
-	max-width: 95%;
+	width: 100%;
 	margin: auto;
-	padding-left: 1em;
 	margin-bottom: 1em;
 }
 
@@ -49,21 +46,26 @@ a:hover {
 	color: red;
 }
 
+/*Tại sao đặt width 33.33% thì chỉ hiển thị được hai div trên một hàng ?? hoặc khi thu nhỏ màn hình cũng chỉ có 2 div*/
 .productimage {
 	display: inline-block;
-	width: 30%;
-	height: 25%;
-	padding: 1em 1em 1em 3em;
+	width: 33.33%;
+	padding: ;
 	text-align: center;
-	margin: auto;
 }
 
-.containerimage img {
+.containerimage {
 	max-width: 100%;
 	max-height: 90%;
 }
 
+.containerimage img {
+	width: 100%;
+	height: 100%;
+}
+
 p {
+	max-width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
