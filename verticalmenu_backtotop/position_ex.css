@@ -5,7 +5,11 @@
 }
 
 body {
+<<<<<<< HEAD
 	width: 90%;
+=======
+	max-width:1200px;
+>>>>>>> 1f65d6920ede34e540396e9a1e56bacfd8b6459c
 	margin: 0 auto;
 }
 
@@ -28,6 +32,7 @@ h1 {
 	margin-bottom: 1em;
 }
 
+<<<<<<< HEAD
 nav a {
 	display: block;
 	font-size: 1em;
@@ -52,6 +57,30 @@ nav a.active {
 
 a {
 	color: black;
+=======
+nav {
+	position: absolute;
+	/*left: -8em;*/
+	transform: translate(-100%, 10%);
+	padding-bottom: 1em;
+	/*text-align: center;*/
+	background-color: lightblue;
+	border: 1px solid black;
+	border-radius: 4%;
+}
+
+/*nav:hover*/
+
+nav a {
+	display: block;
+	font-size: 1.5em;
+	padding: 0.5em 1em 0;
+	/*border: 1px solid grey;*/	
+}
+
+a {
+	color: blue;
+>>>>>>> 1f65d6920ede34e540396e9a1e56bacfd8b6459c
 	text-decoration: none;
 }
 
@@ -95,6 +124,7 @@ img:hover {
 .backtop {
 	position: fixed;
 	bottom: 1em;
+<<<<<<< HEAD
 	right: -5em;
 }
 
@@ -122,3 +152,12 @@ img:hover {
 	padding: 0.5em 3em 0 1em;
 	}
 }
+=======
+	right: 0;
+}
+
+.backtop img {
+	width: 40%;
+	height: auto;
+}
+>>>>>>> 1f65d6920ede34e540396e9a1e56bacfd8b6459c

@@ -28,7 +28,7 @@ h1 {
 }
 
 nav {
-	padding-left: 1.5em;
+	padding-left: 1em;
 	padding-bottom: 1em;
 }
 
@@ -46,11 +46,13 @@ a:hover {
 	color: red;
 }
 
-/*Tại sao đặt width 33.33% thì chỉ hiển thị được hai div trên một hàng ?? hoặc khi thu nhỏ màn hình cũng chỉ có 2 div*/
+/*margin-right:-4px do khoảng trắng giữa các phần tử inline và inline-block 
+trong code html sẽ hiển thị là 4px trên trình duyệt*/
 .productimage {
 	display: inline-block;
 	width: 33.33%;
-	padding: ;
+	margin-right: -4px;
+	padding: 1em;
 	text-align: center;
 }
 
