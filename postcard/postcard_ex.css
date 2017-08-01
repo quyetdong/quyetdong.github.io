@@ -20,9 +20,22 @@ p {
 }
 
 .greeting {
-	visibility: hidden;
+	position: absolute;
+	top: 50%;
+	right: 50%;
 	max-width: 0%;
-	animation: movegreeting 5s ease;
+	animation: movegreeting 3s ease-in-out;
+	animation-delay: 0.5s;
+}
+
+.congrats {
+	opacity: 1;
+	animation: anicongrats 6s ease;
+	animation-delay: 0s;
+}
+
+.goodbye {
+	opacity: 0;
 }
 
 img {
@@ -33,35 +46,47 @@ img {
 
 @keyframes movegreeting {
 	0% {
+		max-width: 10%;
+		opacity: 0.1; 
+		top: 80%; 
+		right: 80%;
+	}
+	
+	/*25% {
 		max-width: 20%;
-		/*margin-left: 0;*/opacity: 0.5; 
-		visibility: visible;
-		transform: translate(-30%,30%);
+		opacity: 0.5; 
+		top: 45%; 
+		right: 50%;
 	}
-	
-	30% {
+	*/
+	50% {
 		max-width: 30%;
-		/*margin-left: 50%;*/opacity: 1; 
-		visibility: : visible;
-		transform: translate(0,0);
+		opacity: 1; 
+		top: 15%; 
+		right: 25%;
 	}
 	
-	60% {
-		max-width: 40%;
-		/*margin-left: 100%;*/opacity: 0; 
-		visibility: visible;
-		transform: translate(30%,-30%);
+	75% {
+		max-width: 35%;
+		opacity: 0.1; 
+		top: -5%; 
+		right: 0%;
 	}
-	61% {visibility: hidden;}
-	100% {max-width: 0%;}
+	100% {
+		max-width: 0;
+		opacity: 0;
+		top: 0;
+		right: 0;
+	}
 }
 
-@keyframes aniheading {
-	0% {background-color: #bfedd2;color: black;}
-	25% {background-color: #88cfc7;color: grey;}
-	50% {background-color: #38f7cc;color: blue;}
-	75% {background-color: #88cfc7;color: grey;}
-	100% {background-color: #bfedd2;color: black;}
+@keyframes anicongrats {
+	0% {opacity: 0; }
+	20% {opacity: 0; }
+	40% {opacity: 0; }
+	70% {opacity: 0.5; }
+	85% {opacity: 0.8; }
+	100% {opacity: 1; }
 }
 
 @media screen and (min-width: 720px) and (max-width: 1199px){
