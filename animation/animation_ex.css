@@ -27,7 +27,7 @@ body {
 	overflow: hidden;
 	text-align: center;
 	animation: moveheader 10s linear;
-	animation-delay: 2s;
+	animation-delay: 3s;
 }
 
 h1 {

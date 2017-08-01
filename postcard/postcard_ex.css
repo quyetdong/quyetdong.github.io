@@ -1,0 +1,91 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0 auto;
+}
+
+div {
+	font-size: 1.8em;
+	text-align: center;
+	max-width: 100%;
+}
+
+p {
+	font-weight: bold;
+	font-size: 1.8em;
+}
+
+.greeting {
+	visibility: hidden;
+	max-width: 0%;
+	animation: movegreeting 5s ease;
+}
+
+img {
+	/*background-color: blue;*/
+	max-width: 50%;
+}
+
+
+@keyframes movegreeting {
+	0% {
+		max-width: 20%;
+		/*margin-left: 0;*/opacity: 0.5; 
+		visibility: visible;
+		transform: translate(-30%,30%);
+	}
+	
+	30% {
+		max-width: 30%;
+		/*margin-left: 50%;*/opacity: 1; 
+		visibility: : visible;
+		transform: translate(0,0);
+	}
+	
+	60% {
+		max-width: 40%;
+		/*margin-left: 100%;*/opacity: 0; 
+		visibility: visible;
+		transform: translate(30%,-30%);
+	}
+	61% {visibility: hidden;}
+	100% {max-width: 0%;}
+}
+
+@keyframes aniheading {
+	0% {background-color: #bfedd2;color: black;}
+	25% {background-color: #88cfc7;color: grey;}
+	50% {background-color: #38f7cc;color: blue;}
+	75% {background-color: #88cfc7;color: grey;}
+	100% {background-color: #bfedd2;color: black;}
+}
+
+@media screen and (min-width: 720px) and (max-width: 1199px){
+	.backtop img {width: 30%;}
+	nav {padding-bottom: 3em;}
+}
+
+@media screen and (min-width: 1200px) {
+	body {width: 90%;}
+	h1 {font-size: 2.5em;}
+	nav {
+	padding-bottom: 8em;
+	}
+	nav a {
+	font-size: 1.5em;
+	padding: 0.5em 3em 0 1em;
+	}
+
+	.backtop {
+	right: 0;
+	}
+
+	.backtop img {
+	width: 40%;
+	height: auto;
+	}
+}
