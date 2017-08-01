@@ -12,11 +12,22 @@ body {
 
 #head1 {
 	background-color: #bfedd2;
+	text-align: center;
 	/*animation-delay: 8s;*/
 }
 
 #head1:hover {
 	animation: aniheading 5s ease-in-out 2;
+}
+
+.header p {
+	padding: 0.2em;
+	white-space: nowrap;
+	visibility: hidden;
+	overflow: hidden;
+	text-align: center;
+	animation: moveheader 10s linear;
+	animation-delay: 2s;
 }
 
 h1 {
@@ -26,13 +37,13 @@ h1 {
 	padding-bottom: 0.5em;
 	padding-top: 0.5em;
 	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	/*margin-bottom: 0.5em;*/
 	text-align: center;
-	animation: moveheading 5s ease-in-out;
+	/*animation: moveheader 5s ease-in-out;*/
 	/*border: 1px solid pink;*/
 }
 
-p {
+.productimage p {
 	max-width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -131,10 +142,10 @@ trong code html sẽ hiển thị là 4px trên trình duyệt*/
 }
 
 
-@keyframes moveheading {
-	0% {margin-left: 100%;opacity: 0.2;}
-	100% {margin-left: 0%;opacity: 1;}
-
+@keyframes moveheader {
+	0% {margin-left: 100%;opacity: 0.5; visibility: visible;}
+	50% {margin-left: 20%;opacity: 1; visibility: visible;}
+	100% {margin-left: -40%;opacity: 0; visibility: visible;}
 }
 
 @keyframes aniheading {
