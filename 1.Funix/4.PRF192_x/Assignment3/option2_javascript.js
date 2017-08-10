@@ -48,20 +48,17 @@ $(document).ready(function() {
 		}
 		
 		if ($button1=='true') {
-			$average[$button1num] = (parseInt($mathsMark.val()) + parseInt($physicsMark.val()) + parseInt($chemistryMark.val()))/3;
+			$average[$button1num] = ((parseInt($mathsMark.val()) + parseInt($physicsMark.val()) + parseInt($chemistryMark.val()))/3).toFixed(2);
 			$button1num = $button1num + 1;
 			$('div.table table').append(
-				'<tr id=\'student' + $button1num + '\'><td>' + $button1num + '</td>' + 
-					'<td>' + $.trim($name.val()) + '</td>' +
-					'<td>' + $.trim($mathsMark.val()) + '</td>' +
-					'<td>' + $.trim($physicsMark.val()) + '</td>' +
-					'<td>' + $.trim($chemistryMark.val()) + '</td>' +
-					'<td id=\'average' + $button1num +  '\'>' + '?' + '</td>' +
-				'</tr>');	
-			
-		}
-		
-		
+				'<tr id=\'student' + $button1num + '\'><td class=\'indexCol\'>' + $button1num + '</td>' + 
+					'<td class=\'studentCol\'>' + $.trim($name.val()) + '</td>' +
+					'<td class=\'mathsCol\'>' + $.trim($mathsMark.val()) + '</td>' +
+					'<td class=\'physicsCol\'>' + $.trim($physicsMark.val()) + '</td>' +
+					'<td class=\'chemCol\'>' + $.trim($chemistryMark.val()) + '</td>' +
+					'<td class=\'averCol\' id=\'average' + $button1num +  '\'>' + '?' + '</td>' +
+				'</tr>');
+		}		
 	});
 	
 	$('#average').click(function() {
@@ -80,10 +77,6 @@ $(document).ready(function() {
 		
 		}
 	});
-	
-	
-	
-	
 
 	
 });

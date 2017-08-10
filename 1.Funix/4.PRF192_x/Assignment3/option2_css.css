@@ -63,22 +63,55 @@ section {
 	display: inline-block;
 	border: 1px solid black;
 	margin-top: 1em;
-	padding: 1em 3em;
+	padding: 1em 1em;
+}
+
+table, tr, th, td {
+	border-collapse: collapse;
 }
 
 table {
-	border-collapse: collapse;
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
 }
 
 th, td {
 	display: inline-block;
+	white-space: normal;
+	word-wrap: break-word;
 	border: 1px solid black;
 	border-bottom: 0;
 	border-right: 0;
-	font-weight: normal;
-	padding: 0.5em 1em ;
+	padding: 0.5em 0;
+	text-align: center;
+}
+
+.indexCol{
+	width: 4em;
+}
+
+.studentCol {
+	width: 10em;
+}
+
+.mathsCol {
+	width: 4.5em;
+}
+
+.physicsCol {
+	width: 4em;
+}
+
+.chemCol {
+	width:4em;
+}
+
+.averCol {
+	width: 7em;
+}
+
+td.studentCol {
+	text-align: left;
 }
 
 .studentHightLight {
