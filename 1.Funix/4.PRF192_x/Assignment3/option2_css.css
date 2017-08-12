@@ -3,13 +3,19 @@
 	margin: 0 auto;
 	padding: 0;
 	font-weight: normal;
-	font-size: 16px;
 }
 
 form {
 	float: left;
+	width: 55%;
 	margin: 2em 0.5em;
 	border: 1px solid black;
+	font-size: 1em;
+}
+
+ul {
+	list-style-type: none;
+	padding: 1.5em 1em 2em 3em;
 }
 
 input.process {
@@ -24,7 +30,7 @@ div.table .process {
 }
 
 #gradeTable li {
-	margin: 0.7em 0;
+	margin: 1.2em 0;
 }
 
 #button1 {
@@ -33,11 +39,7 @@ div.table .process {
 
 #title {
 	text-align: center;
-}
-
-ul {
-	list-style-type: none;
-	padding: 2em 1em 2em 3em;
+	font-size: 1.2em;
 }
 
 ul#notify {
@@ -56,29 +58,30 @@ span.inputInstruct {
 }
 
 section {
+	display: inline-block;
 	margin-top: 0.5em;
+	width: 43%;
 }
 
 .table {
-	display: inline-block;
+	width: 100%;
 	border: 1px solid black;
-	margin-top: 1em;
+	margin-top: 0.2em;
 	padding: 1em 1em;
 }
 
-table, tr, th, td {
+table, tr {
 	border-collapse: collapse;
 }
 
 table {
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
+	width: 98%;
 }
 
 th, td {
-	display: inline-block;
-	white-space: normal;
-	word-wrap: break-word;
+	word-break: break-all;
 	border: 1px solid black;
 	border-bottom: 0;
 	border-right: 0;
@@ -86,12 +89,16 @@ th, td {
 	text-align: center;
 }
 
+td {
+	height: auto;
+}
+
 .indexCol{
 	width: 4em;
 }
 
 .studentCol {
-	width: 10em;
+	width: 12em;
 }
 
 .mathsCol {
@@ -107,7 +114,7 @@ th, td {
 }
 
 .averCol {
-	width: 7em;
+	width: 6em;
 }
 
 td.studentCol {
