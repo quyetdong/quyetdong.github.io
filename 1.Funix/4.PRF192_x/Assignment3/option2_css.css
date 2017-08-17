@@ -119,6 +119,7 @@ td {
 
 td.studentCol {
 	text-align: left;
+	padding: 0 0.4em;
 }
 
 .studentHightLight {

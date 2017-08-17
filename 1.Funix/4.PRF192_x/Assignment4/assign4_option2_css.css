@@ -1,0 +1,153 @@
+* {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#gradeData {
+	position: relative;
+	display: inline-block;
+	padding: 0.5em 1em 1em;
+	width: 100%;
+}
+
+#gradeTable li {
+	margin: 1.2em 0;
+}
+
+#button1 {
+	margin-left: 10em;
+}
+
+#dropdown_menu div, #dropdown_menu p {
+	cursor: pointer;	
+}
+
+#dropdown_menu p, #dropdown_title {display: inline-block;}
+
+body {
+	width: 90%;
+}
+
+form {
+	width: 100%;
+	margin: 1em;
+	font-size: 1em;
+}
+
+h2 {
+	padding-bottom: 1em;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0em 1em 2em 7em;
+}
+
+table, tr {
+	border-collapse: collapse;
+}
+
+table {
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	width: 98%;
+}
+
+th, td {
+	word-break: break-all;
+	border: 1px solid black;
+	border-bottom: 0;
+	border-right: 0;
+	padding: 0.5em 0;
+	text-align: center;
+}
+
+td {
+	height: auto;
+}
+
+.hidden {display: none;} 
+.dhidden, .fhidden, .lhidden {
+	display: none;
+}
+
+span.inputItem {
+	display: inline-block;
+	width: 8em;
+}
+
+input.process {
+	background-color: #c3ccd1;
+	border: 1.2px solid black;
+	width: 7em;
+	padding: 0.4em 0;
+	margin-top: 2em;
+	margin-right: 1em;
+	border-radius: 10%;
+}
+
+div.table {
+	width: 100%;
+	border: 1px solid black;
+	margin-top: 0.2em;
+	padding: 1em 1em;
+}
+
+div.inpProcess {
+	padding-left: 80%;
+}
+
+.inputInstruct {
+	display: none;
+}
+.inpRed {
+	display: inline-block;	
+	padding-left: 0.2em; 
+	color: red; 
+}
+
+.indexCol{
+	width: 3em;
+}
+
+.studentCol {
+	width: 9em;
+}
+
+.classCol {
+	width: 4em;
+}
+
+.emailCol {
+	width: 9em;
+}
+
+.phoneCol {
+	width:5em;
+}
+
+.literatureCol {
+	width:4em;
+}
+
+.moralCol {
+	width:4em;
+}
+
+.programCol {
+	width:4em;
+}
+
+.averCol {
+	width: 4em;
+}
+
+td.studentCol {
+	text-align: left;
+	padding: 0 0.4em;
+}
+
+.studentHightLight {
+	color: red;
+}
