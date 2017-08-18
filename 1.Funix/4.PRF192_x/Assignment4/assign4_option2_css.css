@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+body {
+	width: 100%;
+}
+
 #gradeData {
 	position: relative;
 	display: inline-block;
@@ -16,22 +20,57 @@
 }
 
 #button1 {
-	margin-left: 10em;
+	margin-left: 22%;
+	width: 10%;
 }
 
-#dropdown_menu div, #dropdown_menu p {
+#dropdown_menu {
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+#dropdown_menu div {
 	cursor: pointer;	
 }
 
-#dropdown_menu p, #dropdown_title {display: inline-block;}
+#dropdown_title div {
+	width: 85%;
+	border: 1px solid black;
+	padding: 0.2em;
+	border-top-left-radius: 5%;
+	border-bottom-left-radius: 5%;
+}
 
-body {
-	width: 90%;
+#dropdown_menu .numOpt, #dropdown_title {
+	float: left;
+	width: 25%;
+	font-family: Arial;
+}
+
+#dropdown_title div, #dropdown_title span {
+	display: inline-block;
+	padding: 0.5em;
+}
+
+#dropdown_menu .numOpt {
+	margin-right: 75%;
+	padding: 0.2em;
+	border: 1px solid black;
+}
+
+#dropdown_arrow {
+	width: 15%;
+	text-align: center;
+	border: 1px solid black;
+	border-top-right-radius: 10%;
+	border-bottom-right-radius: 10%;
+	background-color: #c3ccd1;
 }
 
 form {
+	clear: both;
 	width: 100%;
-	margin: 1em;
+	margin: 1em 1em 1em;
 	font-size: 1em;
 }
 
@@ -41,7 +80,7 @@ h2 {
 
 ul {
 	list-style-type: none;
-	padding: 0em 1em 2em 7em;
+	margin: 0em 1em 2em 7em;
 }
 
 table, tr {
@@ -51,7 +90,7 @@ table, tr {
 table {
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
-	width: 98%;
+	width: 100%;
 }
 
 th, td {
@@ -67,9 +106,12 @@ td {
 	height: auto;
 }
 
-.hidden {display: none;} 
-.dhidden, .fhidden, .lhidden {
+.hidden, .dhidden, .fhidden, .lhidden {
 	display: none;
+}
+
+.inputInfor2, .inputInfor3, .inputInfor4 {
+	border-top: 1.2px solid black;
 }
 
 span.inputItem {
@@ -80,22 +122,21 @@ span.inputItem {
 input.process {
 	background-color: #c3ccd1;
 	border: 1.2px solid black;
-	width: 7em;
-	padding: 0.4em 0;
-	margin-top: 2em;
-	margin-right: 1em;
-	border-radius: 10%;
+	padding: 0.2em 0;
+	width: 40%;
+	margin-left: 1em;
+	border-radius: 8%;
+}
+div#inpProcess {
+	margin-left: 77%;
+	width: 25%;
+	margin-top: 1em;
 }
 
 div.table {
 	width: 100%;
-	border: 1px solid black;
 	margin-top: 0.2em;
-	padding: 1em 1em;
-}
-
-div.inpProcess {
-	padding-left: 80%;
+	font-size: 0.85em;
 }
 
 .inputInstruct {
@@ -108,39 +149,39 @@ div.inpProcess {
 }
 
 .indexCol{
-	width: 3em;
+	width: 7%;
 }
 
 .studentCol {
-	width: 9em;
+	width: 20%;
 }
 
 .classCol {
-	width: 4em;
+	width: 7%;
 }
 
 .emailCol {
-	width: 9em;
+	width: 23%;
 }
 
 .phoneCol {
-	width:5em;
+	width: 15%;
 }
 
 .literatureCol {
-	width:4em;
+	width:7%;
 }
 
 .moralCol {
-	width:4em;
+	width:7%;
 }
 
 .programCol {
-	width:4em;
+	width:7%;
 }
 
 .averCol {
-	width: 4em;
+	width: 7%;
 }
 
 td.studentCol {
@@ -148,6 +189,17 @@ td.studentCol {
 	padding: 0 0.4em;
 }
 
-.studentHightLight {
+.goodMark {
 	color: red;
+	font-weight: bold;
+}
+.badMark {
+	color: blue;
+	font-weight: bold;
+}
+
+.averRed{color: red;}
+
+@media only screen and (min-width: 720px) {
+	body {width: 80%;}
 }

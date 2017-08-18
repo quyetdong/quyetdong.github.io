@@ -16,7 +16,7 @@ $(document).ready(function() {
 		$(dropDown[j]).click(function() {
 			$(dataForm[dataForm.length-1]).hide();
 			$(dataForm[j]).show();
-			$('ul span.inpInstr').addClass('hidden');
+			$('ul span.inpInstr').removeClass('inpRed').addClass('hidden');
 		});
 	}
 		
@@ -79,13 +79,11 @@ $(document).ready(function() {
 			
 			} else {$(inpInstr.email[i]).removeClass('hidden').addClass('inpRed'); button1Inp[i]='false';}
 		
-			if($.trim($(inpData.phone[i]).val()) == '') {
-				$(inpInstr.phone[i]).removeClass('hidden').addClass('inpRed');
-				button1Inp[i]='false';
-			} else if (($.isNumeric($(inpData.phone[i]).val()) == false) || (0 > $(inpData.phone[i]).val()) || ($(inpData.phone[i]).val() > 10)) {
-				$(inpInstr.phone[i]).removeClass('hidden').addClass('inpRed');
-				button1Inp[i]='false';
-			} else {$(inpInstr.phone[i]).removeClass('inpRed').addClass('hidden');}
+			var phoneReg = /^\(?([0-9]{3,4})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+			var is_phone = phoneReg.test($.trim($(inpData.phone[i]).val()));
+			if(is_phone) {
+				$(inpInstr.phone[i]).removeClass('inpRed').addClass('hidden');
+			} else {$(inpInstr.phone[i]).removeClass('hidden').addClass('inpRed'); button1Inp[i]='false';}
 		
 			if($.trim($(inpData.literature[i]).val()) == '') {
 				$(inpInstr.literature[i]).removeClass('hidden').addClass('inpRed');
@@ -110,20 +108,22 @@ $(document).ready(function() {
 				$(inpInstr.programming[i]).removeClass('hidden').addClass('inpRed');
 				button1Inp[i]='false';
 			} else {$(inpInstr.programming[i]).removeClass('inpRed').addClass('hidden');}
-		
+				
+			
 			if (button1Inp[i]=='true') {
-				average[button1Stt] = ((parseInt($(inpData.literature[i]).val()) + parseInt($(inpData.morality[i]).val()) + parseInt($(inpData.programming[i]).val()))/3).toFixed(2);
+				average[button1Stt] = ((parseFloat($(inpData.literature[i]).val()) + parseFloat($(inpData.morality[i]).val()) + parseFloat($(inpData.programming[i]).val()))/3).toFixed(2);
 				button1Stt = button1Stt + 1;
 				$('div.table table').append(
-					'<tr id=\'student' + button1Stt + '\'><td class=\'indexCol\'>' + button1Stt + '</td>' + 
+					'<tr id=\'student' + button1Stt + '\'>' +
+					'<td class=\'indexCol\'>' + button1Stt + '</td>' + 
 					'<td class=\'studentCol\'>' + $.trim($(inpData.name[i]).val()) + '</td>' +
 					'<td class=\'classCol\'>' + $.trim($(inpData.classArr[i]).val()) + '</td>' +
 					'<td class=\'emailCol\'>' + $.trim($(inpData.email[i]).val()) + '</td>' +
 					'<td class=\'phoneCol\'>' + $.trim($(inpData.phone[i]).val()) + '</td>' +
-					'<td class=\'literatureCol\'>' + $.trim($(inpData.literature[i]).val()) + '</td>' +
-					'<td class=\'moralCol\'>' + $.trim($(inpData.morality[i]).val()) + '</td>' +
-					'<td class=\'programCol\'>' + $.trim($(inpData.programming[i]).val()) + '</td>' +
-					'<td class=\'averCol\' id=\'average' + button1Stt +  '\'>' + '?' + '</td>' +
+					'<td class=\'literatureCol tdMark' + button1Stt + '\'>' + $.trim($(inpData.literature[i]).val()) + '</td>' +
+					'<td class=\'moralCol tdMark' + button1Stt + '\'>' + $.trim($(inpData.morality[i]).val()) + '</td>' +
+					'<td class=\'programCol tdMark' + button1Stt + '\'>' + $.trim($(inpData.programming[i]).val()) + '</td>' +
+					'<td class=\'averCol averRed tdMark' + button1Stt + '\'' + ' id=\'average' + button1Stt + '\'>' + '?' + '</td>' +
 					'</tr>');
 				$(inpData.name[i]).val('');
 				$(inpData.classArr[i]).val('');
@@ -137,20 +137,31 @@ $(document).ready(function() {
 	});
 	
 	$('#average').click(function() {
-		for (i=0; i<average.length; i++) {
+		for (i=0; i<button1Stt; i++) {
 			var averageIndex = 'div.table table #average' + (i + 1);
 			$(averageIndex).text(average[i]);
 		}
 	});
-	
+
+	var mark={};
 	$('#goodStudent').click(function() {
-		for (i=0; i<average.length; i++) {
-			if((average[i] > 8) || (average[i] == 8)) {
-				var idGoodStudent = 'tr#student' + (i + 1);
-				$(idGoodStudent).addClass('studentHightLight');
+		for (i=0; i<button1Stt; i++) {
+			for (j=6; j<10; j++) {
+				var tdItem = 'td.tdMark' + (i+1) + ':nth-child(' + j +')';
+				mark[tdItem] = $(tdItem).text();
+				var evalMark = mark[tdItem];
+				console.log(evalMark);
+				if (evalMark>8 || evalMark==8) {
+					$(tdItem).addClass('goodMark');
+				}
+				if (evalMark<5) {
+					$(tdItem).addClass('badMark');
+					if (j==9) {
+						$(tdItem).removeClass('averRed');
+					}
+				}			
 			}
-		
-		}
+		}			
 	});
 
 	
