@@ -150,7 +150,7 @@ $(document).ready(function() {
 				var tdItem = 'td.tdMark' + (i+1) + ':nth-child(' + j +')';
 				mark[tdItem] = $(tdItem).text();
 				var evalMark = mark[tdItem];
-				console.log(evalMark);
+				/* console.log(evalMark); */
 				if (evalMark>8 || evalMark==8) {
 					$(tdItem).addClass('goodMark');
 				}

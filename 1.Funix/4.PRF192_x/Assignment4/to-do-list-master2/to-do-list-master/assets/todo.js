@@ -22,7 +22,6 @@ data = data || {};
             todoHeader: "task-header",
             todoDate: "task-date",
             todoDescription: "task-description",
-            todoOwner: "task-owner",
             taskId: "task-",
             formId: "todo-form",
             dataAttribute: "data",
@@ -137,11 +136,6 @@ data = data || {};
             "class" : defaults.todoDescription,
             "text": params.description
         }).appendTo(wrapper);
-        
-        $("<div />", {
-            "class" : defaults.todoOwner,
-            "text": params.owner
-        }).appendTo(wrapper);
 
 	    wrapper.draggable({
             start: function() {
@@ -164,17 +158,16 @@ data = data || {};
     todo.add = function() {
         var inputs = $("#" + defaults.formId + " :input"),
             errorMessage = "Title can not be empty",
-            id, title, description, date, owner, tempData;
+            id, title, description, date, tempData;
 
-        if (inputs.length !== 5) {
+        if (inputs.length !== 4) {
             return;
         }
 
         title = inputs[0].value;
         description = inputs[1].value;
         date = inputs[2].value;
-        owner = inputs[3].value;
-        
+
         if (!title) {
             generateDialog(errorMessage);
             return;
@@ -187,8 +180,7 @@ data = data || {};
             code: "1",
             title: title,
             date: date,
-            description: description,
-            owner: owner
+            description: description
         };
 
         // Saving element in local storage
@@ -202,7 +194,6 @@ data = data || {};
         inputs[0].value = "";
         inputs[1].value = "";
         inputs[2].value = "";
-        inputs[3].value = "";
     };
 
     var generateDialog = function (message) {
