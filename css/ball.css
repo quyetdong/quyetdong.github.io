@@ -1,0 +1,19 @@
+.ball {
+  width: 20px;
+  height: 20px;
+  margin: 33px 0px;
+  background: linear-gradient(
+      35deg,
+      #5eeeee,
+      #f3e525
+    );
+  border-radius: 50%;
+}
+
+.left-ball {
+  margin-left: 259px;
+}
+
+.right-ball {
+  margin-right: 259px;
+}

@@ -4,30 +4,36 @@ body {
 }
 
 main {
-  margin: 0 60px;
+  margin: 0 50px;
 }
 
 h1 {
   text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* items-row {
   height: 200px;
 } */
 
-.single-item {
+.single-image {
 	border: 1px solid grey;
 	max-width: 250px;
 	height: 300px;
-	margin: 20px 40px 30px 0;
+	margin: 20px 0px;
 }
 
 .left-item {
   float: left;
+  margin-left: 10px;
+  margin-right: 50px;
 }
 
 .right-item {
   float: right;
+  margin-right: 10px;
 }
 
 .clear-float {
