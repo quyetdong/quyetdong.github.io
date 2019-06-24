@@ -17,3 +17,13 @@
 .right-ball {
   margin-right: 259px;
 }
+
+.moon-shape {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 15px 5px 0px 0px blue;
+}
