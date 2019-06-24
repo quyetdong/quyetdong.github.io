@@ -1,6 +1,7 @@
 body {
 	max-width: 1000px;
-	margin: auto;
+  margin: auto;
+  background: url('../book-page-background.jpg');
 }
 
 main {
@@ -22,7 +23,7 @@ h1 {
 	border: 1px solid grey;
 	max-width: 250px;
 	height: 300px;
-	margin: 20px 0px;
+	margin: 20px 0px 30px;
 }
 
 .left-item {

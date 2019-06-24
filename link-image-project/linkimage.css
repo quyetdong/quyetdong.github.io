@@ -5,13 +5,24 @@
 }
 
 a {
-	color: blue;
+	color: #ff8000;
 	text-decoration: none;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 200;
 }
+
+a>p {
+	margin: 0;
+}
+
 a:hover {
 	color: red;
 }
 
+/* .laptop {
+	opacity: 0.5;
+} */
 /*a {
 	float: left;
 }
