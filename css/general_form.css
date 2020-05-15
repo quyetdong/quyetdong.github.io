@@ -1,0 +1,47 @@
+body {
+	max-width: 1000px;
+  margin: auto;
+  background: url('../book-page-background.jpg');
+}
+
+main {
+  margin: 0 50px;
+  font-size: 30px;
+}
+
+main label {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* items-row {
+  height: 200px;
+} */
+
+.single-image {
+	border: 1px solid grey;
+	max-width: 250px;
+	height: 300px;
+	margin: 20px 0px 30px;
+}
+
+.left-item {
+  float: left;
+  margin-left: 10px;
+  margin-right: 50px;
+}
+
+.right-item {
+  float: right;
+  margin-right: 10px;
+}
+
+.clear-float {
+  clear: both;
+}
